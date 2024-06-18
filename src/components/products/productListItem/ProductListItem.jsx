@@ -1,3 +1,4 @@
+import { useState } from "react";
 import styles from "./productListItem.module.css";
 
 
@@ -21,10 +22,13 @@ const Discount = ({percent}) => {
 const ProducListItem = ({ product }) => {
 
     let convertPrice = product.price.toFixed(2).replace(".", ",");
+    const [active, setActive] = useState(true)
+
+    let actvieClss = active ? styles.open : null
 
     return (
 
-        <div className={styles.productListItem}>
+        <div className={`${styles.productListItem} ${actvieClss}`}>
             <div className={styles.header}>
                 <Discount percent={product.discountInPercent}></Discount>
                 <img src={product.image} />
