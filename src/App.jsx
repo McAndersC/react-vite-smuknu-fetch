@@ -5,6 +5,7 @@ import Footer from "./components/footer/Footer";
 import ProductsPage from "./pages/products/ProductsPage";
 import MemberPage from "./pages/member/MemberPage";
 import ReviewList from "./components/reviews/reviewList/ReviewList";
+import PlaygroundPage from "./pages/playground/playgroundPage";
 
 
 function App() {
@@ -25,6 +26,10 @@ function App() {
     {
       path: "/bliv-medlem",
       element : <MemberPage></MemberPage>
+    },
+    {
+      path: "/playground",
+      element : <PlaygroundPage></PlaygroundPage>
     },
   ]);
 

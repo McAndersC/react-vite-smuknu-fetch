@@ -1,8 +1,6 @@
 import styles from "./reviewItem.module.css"
 const ReviewItem = ({review = {}}) => {
 
-    
-
     return (
         <div className={styles.reviewItem}>
             <div className={styles.header}>
