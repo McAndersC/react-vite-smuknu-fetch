@@ -59,25 +59,25 @@ const ProductList = ({recommended = false, dev = true}) => {
 
     return (
         <section className={styles.productList}>
-            <h1>
+            <div>
               Recommended: {recommended.toString()}<br/>
               DEVMode: {devMode.toString()}
-            </h1>
+            </div>
           
             {/* <button onClick={() => setDevMode(!devMode)}>TOGGLE DEVMODE</button> */}
 
+            <div>
+              <Loader loading={loading}></Loader>
 
-            <Loader loading={loading}></Loader>
+              {list.map((product) => {
 
-            {list.map((product) => {
-
-                return devMode ? <DebugElement obj={product} key={product._id}></DebugElement> : <ProducListItem key={product._id} product={product}></ProducListItem>
-               
-
-              
+                  return devMode ? <DebugElement obj={product} key={product._id}></DebugElement> : <ProducListItem key={product._id} product={product}></ProducListItem>
                 
-            })}
-            
+
+                
+                  
+              })}
+            </div>
         </section>
     );
 };

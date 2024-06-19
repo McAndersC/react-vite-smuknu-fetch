@@ -1,6 +1,7 @@
 import { useState } from "react";
 import ProductList from "../../components/products/productsList/ProductList";
 
+
 const HomePage = () => {
 
 
@@ -9,7 +10,11 @@ const HomePage = () => {
     return (
         <div>
             HOME INDHOLD
-            <button onClick={ () => setDevMode(!devMode)}>Toggle DevMode {devMode.toString()}</button>
+            
+            <div>
+                <button onClick={ () => setDevMode(!devMode)}>Toggle DevMode {devMode.toString()}</button>
+            </div>
+
             <ProductList recommended={true} dev={devMode}></ProductList>
             
         </div>
